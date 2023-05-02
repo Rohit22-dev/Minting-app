@@ -18,16 +18,16 @@ const Header = () => {
       </ul>
       {connectedAccount ? (
         <button
-          className="shadow-xl shadow-black text-white 
-        bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2
+          className="shadow-md shadow-black text-white 
+          bg-[#f77a06] hover:bg-[#f73603] md:text-xs p-2
         rounded-full cursor-pointer"
         >
           {truncate(connectedAccount, 4, 4, 11)}
         </button>
       ) : (
         <button
-          className="shadow-xl shadow-black text-white 
-        bg-[#e32970] hover:bg-[#bd255f] md:text-xs p-2
+          className="shadow-md shadow-black text-white 
+          bg-[#03b3f0] hover:bg-[#02a8e3] md:text-xs p-2
         rounded-full cursor-pointer"
           onClick={connectWallet}
         >

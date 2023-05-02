@@ -20,12 +20,12 @@ const Home = () => {
       .catch(() => setGlobalState("loading", { show: false, msg: "" }));
   };
   return (
-    <div className="bg-[url('https://cdn.pixabay.com/photo/2022/03/01/02/51/galaxy-7040416_960_720.png')] bg-cover bg-no-repeat ">
-      <div className="flex flex-col justify-center items-center py-10 mx-auto">
+    <div className="bg-[url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] p-10 bg-cover h-fit bg-no-repeat ">
+      <div className="flex flex-col justify-center items-center py-10 mx-auto backdrop-blur-sm rounded-lg">
         <h1 className="text-white text-5xl font-bold text-center">
           A.I Arts
           <br />
-          <span className="text-gradient">NFTs </span> Collection
+          NFTs Collection
         </h1>
 
         <p className="text-white font-semibold text-sm mt-3">
@@ -33,8 +33,8 @@ const Home = () => {
         </p>
 
         <button
-          className="shadow-xl shadow-black text-white
-            bg-[#e32970] hover:bg-[#bd255f] p-2
+          className="shadow-md shadow-black text-white
+            bg-[#03b3f0] hover:bg-[#02a8e3] p-2
             rounded-full cursor-pointer my-4"
           onClick={onMintNFT}
         >
@@ -91,7 +91,7 @@ const Home = () => {
           className="shadow-xl shadow-black flex flex-row
             justify-center items-center w-10 h-10 rounded-full
           bg-white cursor-pointer p-3 ml-4 text-black 
-            hover:bg-[#bd255f] hover:text-white transition-all
+            hover:bg-[#03b3f0] hover:text-white transition-all
             duration-75 delay-100"
         >
           <span className="text-xs font-bold">{nfts.length}/99</span>
