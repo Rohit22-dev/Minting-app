@@ -6,6 +6,7 @@ const Artworks = ({ artworks }) => {
   const [count] = useState(4);
 
   const [nfts, setNfts] = useState([]);
+  console.log(nfts);
 
   const getNfts = () => {
     return artworks.slice(0, end);

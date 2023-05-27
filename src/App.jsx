@@ -7,6 +7,9 @@ import Home from "./components/Home";
 import Loading from "./components/Loading";
 import { isWallectConnected, loadNfts } from "./MintDapp";
 import { useGlobalState } from "./store";
+import { Route, Routes } from "react-router-dom";
+import AboutUs from "./components/AboutUs";
+import Landing from "./components/Landing";
 
 function App() {
   const [nfts] = useGlobalState("nfts");
@@ -20,9 +23,21 @@ function App() {
     <div className="min-h-screen ">
       <div className="gradient-bg-hero">
         <Header />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route
+            path="main"
+            element={
+              <div>
+                <Home />
+                <Artworks artworks={nfts} />
+              </div>
+            }
+          />
+          <Route path="about" element={<AboutUs />} />
+        </Routes>
       </div>
-      <Artworks artworks={nfts} />
+
       <Footer />
       <Alert />
       <Loading />

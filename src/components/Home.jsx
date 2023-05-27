@@ -20,7 +20,7 @@ const Home = () => {
       .catch(() => setGlobalState("loading", { show: false, msg: "" }));
   };
   return (
-    <div className="bg-[url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] p-10 bg-cover h-fit bg-no-repeat ">
+    <div className="bg-[url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] p-10 bg-cover h-[50rem] bg-no-repeat ">
       <div className="flex flex-col justify-center items-center py-10 mx-auto backdrop-blur-sm rounded-lg">
         <h1 className="text-white text-5xl font-bold text-center">
           A.I Arts

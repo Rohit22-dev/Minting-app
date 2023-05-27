@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ethlogo from "../assets/ethlogo.png";
 import { connectWallet } from "../MintDapp";
 import { truncate, useGlobalState } from "../store";
@@ -12,15 +13,21 @@ const Header = () => {
       </div>
 
       <ul className="md:flex-[0.5] md:flex text-white hidden list-none flex-row justify-between items-center flex-initial">
-        <li className="mx-4 cursor-pointer">Explore</li>
-        <li className="mx-4 cursor-pointer">Features</li>
-        <li className="mx-4 cursor-pointer">Community</li>
+        <Link to="/" className="mx-4 cursor-pointer">
+          Home
+        </Link>
+        <Link to="main" className="mx-4 cursor-pointer">
+          Minting
+        </Link>{" "}
+        <Link to="about" className="mx-4 cursor-pointer">
+          About Us
+        </Link>
       </ul>
       {connectedAccount ? (
         <button
           className="shadow-md shadow-black text-white 
           bg-[#f77a06] hover:bg-[#f73603] md:text-xs p-2
-        rounded-full cursor-pointer"
+        rounded-full cursor-pointer mx-20"
         >
           {truncate(connectedAccount, 4, 4, 11)}
         </button>
